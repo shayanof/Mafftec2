@@ -9,10 +9,10 @@ import java.awt.event.ActionListener;
 public class Person {
     int i;
     public String[] personInfo= new String[]{};
-    JTextField t1 =new JTextField();
-    JTextField t2 =new JTextField();
-    JTextField t3 =new JTextField();
-    JTextField t4 =new JTextField();
+    JTextField sirname =new JTextField();
+    JTextField famlyname =new JTextField();
+    JTextField phonenumber =new JTextField();
+    JTextField emailfield =new JTextField();
     ButtonGroup bg=new ButtonGroup();
     public String name;
     public String efternamn;
@@ -21,18 +21,11 @@ public class Person {
     public String behorighet;
 
     public Person(){
-        int i;
-        String[] personInfo= new String[]{};
-        JTextField t1 =new JTextField();
-        JTextField t2 =new JTextField();
-        JTextField t3 =new JTextField();
-        JTextField t4 =new JTextField();
-        ButtonGroup bg=new ButtonGroup();
-        String name;
-        String efternamn;
-        String telefon;
-        String email;
-        String behorighet;
+        name=sirname.getText();
+        efternamn=famlyname.getText();
+        telefon=phonenumber.getText();
+        email=emailfield.getText();
+        name=sirname.getText();
 
 
         JFrame addPersonFrame = new JFrame("Add ny person");
@@ -53,10 +46,10 @@ public class Person {
         JLabel l5 = new JLabel("Behörighet");
         l5.setBounds(20,170,200,30);
 
-        t1.setBounds(20,40,200,30);
-        t2.setBounds(250,40,200,30);
-        t3.setBounds(20,110,200,30);
-        t4.setBounds(250,110,200,30);
+        sirname.setBounds(20,40,200,30);
+        famlyname.setBounds(250,40,200,30);
+        phonenumber.setBounds(20,110,200,30);
+        emailfield.setBounds(250,110,200,30);
 
         JRadioButton r1= new JRadioButton("B");
         r1.setActionCommand("B");
@@ -96,10 +89,10 @@ public class Person {
         addPersonFrame.add(l4);
         addPersonFrame.add(l5);
 
-        addPersonFrame.add(t1);
-        addPersonFrame.add(t2);
-        addPersonFrame.add(t3);
-        addPersonFrame.add(t4);
+        addPersonFrame.add(sirname);
+        addPersonFrame.add(famlyname);
+        addPersonFrame.add(phonenumber);
+        addPersonFrame.add(emailfield);
         addPersonFrame.add(r1);
         addPersonFrame.add(r2);
         addPersonFrame.add(r3);
@@ -118,7 +111,8 @@ public class Person {
 
 
                 FirstFrame gg=new FirstFrame();
-                gg.chaforrNames[gg.intJcomboBoxNameCounter]=t1.getText();
+                gg.chaforrNames[gg.intJcomboBoxNameCounter]=sirname.getText();
+                System.out.println(gg.chaforrNames[gg.intJcomboBoxNameCounter]);
 
                 addPersonFrame.setVisible(false);
 
